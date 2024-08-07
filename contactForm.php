@@ -5,9 +5,9 @@
 	if (isset($_POST['email'])) {
 		$name = $_POST['name'];
 		$email = $_POST['email'];
-		// $phone = $_POST['phone'];
-		// $type = $_POST['type'];
-		$subject1 = "Contact Enquiry from Website Website";
+		$phone = $_POST['phone'];
+		$subject1 = $_POST['subject'];
+		// $subject1 = "Contact Enquiry from Website Website";
 		$messages = $_POST['messages'];
 
 		// multiple recipients
@@ -25,7 +25,7 @@
 		$message .= '<table width="100%" rules="all" style="border-color: #666;" cellpadding="10">';
 		$message .= "<tr style='background: #eee;'><td><strong>Name:</strong> </td><td>" . $name . "</td></tr>";
 		$message .= "<tr><td><strong>Email:</strong> </td><td>" . $email . "</td></tr>";
-		// $message .= "<tr><td><strong>Phone Number:</strong> </td><td>" . $phone . "</td></tr>";
+		$message .= "<tr><td><strong>Phone Number:</strong> </td><td>" . $phone . "</td></tr>";
 		$message .= "<tr><td><strong>Subject:</strong> </td><td>" . $subject1 . "</td></tr>";
 		// $message .= "<tr><td><strong>Type Of Service:</strong> </td><td>" . $type . "</td></tr>";
 		$message .= "<tr><td><strong>Message:</strong> </td><td>" . $messages . "</td></tr>";
